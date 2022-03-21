@@ -1,0 +1,33 @@
+/* COVID */
+.covid-wrapper {
+  height: 135px;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  position: relative;
+}
+.covid-wrapper h4 {
+  padding-top: 25px;
+  position: relative;
+}
+.covid-wrapper h4::before {
+  content: "";
+  width: 40px;
+  height: 4px;
+  background-color: violet;
+  border-radius: 2px;
+  position: absolute;
+  top: 5px;
+}
+.covid-wrapper .covid-result {
+  padding-top: 30px;
+}
+.covid-wrapper .covid-result .result-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.covid-wrapper .covid-result .result-title span {
+  cursor: pointer;
+}

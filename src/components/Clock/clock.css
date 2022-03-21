@@ -1,0 +1,16 @@
+/* CLOCK */
+.clock-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.clock-wrapper p {
+  font-size: 32px;
+}
+.clock-wrapper span {
+  font-size: 20px;
+}

@@ -1,0 +1,78 @@
+/* MUSIC PLAYER */
+.music-wrapper {
+  width: 350px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.music-wrapper .music-container {
+  padding: 20px;
+  position: relative;
+}
+.music-wrapper .music-info-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.music-wrapper .album-img img {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+
+  overflow: hidden;
+  object-fit: cover;
+}
+.music-wrapper .name-wrapper {
+  padding: 0 10px;
+}
+.music-wrapper .name-wrapper .song-name {
+  width: 240px;
+  font-size: 18px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.music-wrapper .name-wrapper p {
+  font-size: 14px;
+}
+
+/* AudioPlayer Custom */
+.rhap_container {
+  width: 310px;
+  background-color: transparent;
+  padding: 0;
+  box-shadow: none;
+  position: relative;
+}
+.rhap_progress-container {
+  margin: 0;
+  margin-bottom: 30px;
+}
+.rhap_progress-indicator {
+  width: 15px;
+  height: 15px;
+  background-color: #a6b1e1;
+  top: -4px;
+}
+.rhap_progress-filled {
+  background-color: #a6b1e1;
+}
+.rhap_time {
+  font-size: 14px;
+  position: absolute;
+  top: 24px;
+}
+.rhap_total-time {
+  right: 0;
+}
+.rhap_repeat-button,
+.rhap_main-controls-button {
+  color: #999;
+}
+.rhap_volume-container {
+  flex: 0 1 24px;
+}
+.progressbar,
+.rhap_volume-bar {
+  display: none;
+}

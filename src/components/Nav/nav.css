@@ -1,0 +1,38 @@
+/* NAV */
+.nav {
+  width: 180px;
+  padding-right: 30px;
+  border-right: 1px solid #eaeaea;
+}
+.nav .user {
+  width: 100px;
+  margin: 0 auto;
+  margin-bottom: 70px;
+  padding-top: 40px;
+  text-align: center;
+}
+.nav .user .user-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.nav .user .user-img img {
+  width: 100%;
+  object-fit: cover;
+}
+.nav .nav-wrapper {
+}
+.nav .nav-wrapper li a {
+  display: block;
+  font-size: 18px;
+  padding: 10px 15px;
+  transition: box-shadow 0.3s;
+}
+.nav .nav-wrapper li a.active {
+  background-color: #eaeaea;
+  box-shadow: inset 5px 5px 10px rgba(50, 50, 50, 0.1);
+  border-radius: 10px;
+}

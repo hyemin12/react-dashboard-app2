@@ -1,0 +1,38 @@
+/* Calendar */
+.fc-theme-standard {
+  width: 500px;
+  height: auto;
+  margin-bottom: 30px;
+}
+.fc .fc-button {
+  padding: 0 5px;
+  background-color: #ccc;
+  border: none;
+}
+.fc-today-button {
+  display: none !important;
+}
+.fc-event-time {
+  display: none;
+}
+
+/* Today todo */
+.today-todo .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.today-todo .title h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.today-todo .title button {
+  padding: 0 5px;
+  background-color: #eaeaea;
+
+  font-size: 24px;
+}
+.today-todo li {
+  padding: 10px 0;
+  background-color: #f7f7f7;
+}

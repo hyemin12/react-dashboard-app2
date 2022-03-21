@@ -1,0 +1,49 @@
+/* ROUTE works */
+.works-wrapper {
+  width: 968px;
+  height: 645.5px;
+}
+.works-wrapper .filter {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+.works-wrapper .filter li {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  font-size: 18px;
+  cursor: pointer;
+  position: relative;
+}
+.works-wrapper .filter li::before {
+  content: "";
+  width: 1px;
+  height: 10px;
+  background-color: #999;
+  position: absolute;
+  right: -25px;
+}
+.works-wrapper .filter li:last-child::before {
+  display: none;
+}
+.works-wrapper .filter li:hover {
+  color: #a6b1e7;
+}
+.works-wrapper .works-list {
+  display: flex;
+  justify-content: start;
+  gap: 20px;
+  flex-wrap: wrap;
+  height: 540px;
+  overflow-y: auto;
+}
+.works-wrapper .works-list::-webkit-scrollbar {
+  background-color: transparent;
+}
+.works-wrapper .works-list::-webkit-scrollbar-thumb {
+  background-color: #e0e0e0;
+  border-radius: 5px;
+}
