@@ -52,6 +52,7 @@ export const data = {
       albumimg:
         "https://image.genie.co.kr/Y/IMAGE/IMG_ALBUM/082/586/132/82586132_1647227017471_1_600x600.JPG/dims/resize/Q_80,0",
       length: "2:54",
+      mode: "white",
     },
     {
       file: "NCT DREAM_Hello Future.mp3",
@@ -61,6 +62,7 @@ export const data = {
       albumimg:
         "https://image.genie.co.kr/Y/IMAGE/IMG_ALBUM/082/112/811/82112811_1624865167854_1_600x600.JPG/dims/resize/Q_80,0",
       length: "3:40",
+      mode: "",
     },
     {
       file: "원필 (DAY6)_행운을 빌어 줘.mp3",
@@ -70,6 +72,7 @@ export const data = {
       albumimg:
         "https://image.genie.co.kr/Y/IMAGE/IMG_ALBUM/082/523/279/82523279_1644208875973_1_600x600.JPG/dims/resize/Q_80,0",
       length: "3:29",
+      mode: "",
     },
   ],
   quote: [
@@ -215,7 +218,7 @@ export const data = {
       filter: "ect",
       id: "overwatch",
       img: "overwatch",
-      title: "Overwatch flex practice",
+      title: "Overwatch",
       describtion: "display:flex로 반응형 페이지를 구현한 프로젝트",
       skills: ["HTML/CSS"],
       code: "https://github.com/hyemin12/display-flex-overwatch",
@@ -313,16 +316,12 @@ export const data = {
       code: "https://github.com/hyemin12/vanillaJS-challenge/",
       site: "https://hyemin12.github.io/vanillaJS-challenge/",
     },
-    // {
-    //   filter: "ect",
-    //   id: "travelSite",
-    //   img: "travelSite",
-    //   title: "하이미디어 여행사",
-    //   describtion:
-    //     "가상의 여행사 하이미디어 여행사의 홈페이지를 퍼블리싱하였다. 메인페이지와 서브페이지로 이루어져있다.가상의 여행사 메인페이지를 HTML/CSS를 통해 제작하였고, Teb메뉴와 bxSlider를 통해 슬라이더 기능을 구현하였다. 또한 작은 애니메이션 효과를 통해 동적인 이미지를 주고자 하였다.",
-    //   skills: ["html/css"],
-    //   code: "https://github.com/hyemin12/web-design-practice/05travel",
-    //   site: "https://hyemin12.github.io/web-design-practice/05travel",
-    // },
   ],
+  date: {
+    year: new Date().getFullYear(),
+    month: new Date().getMonth(),
+    date: new Date().getDate(),
+    day: new Date().getDay(),
+    week: ["일", "월", "화", "수", "목", "금", "토"],
+  },
 };

@@ -1,0 +1,98 @@
+/* TODO TEMPLATE */
+.todo-wrapper {
+  width: 820px;
+  height: 645.5px;
+}
+.todo-wrapper .todo-title h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.todo-wrapper .todo-row {
+  margin-bottom: 30px;
+  position: relative;
+}
+.todo-wrapper .todo-row .stock {
+  padding: 0 10px;
+  padding-bottom: 2px;
+  background-color: #ff5858;
+  border-radius: 10px;
+  font-size: 12px;
+  color: #fff;
+  position: absolute;
+  top: 4px;
+  left: 80px;
+}
+.todo-wrapper .todo-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  padding-left: 20px;
+  border-bottom: 1px solid #eaeaea;
+  position: relative;
+}
+
+.todo-wrapper .todo-list li:last-child {
+  border: none;
+}
+.todo-wrapper .todo-list li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background-color: #a6b1e1;
+  border-radius: 3px;
+  position: absolute;
+  top: 25px;
+  left: 0;
+}
+.todo-wrapper .todo-list li .plan {
+  width: 380px;
+}
+.todo-wrapper .todo-list li .plan-state {
+  width: 65px;
+  font-size: 12px;
+  text-align: center;
+  padding: 2px 10px;
+  color: #fff;
+  background-color: #ccc;
+  border-radius: 10px;
+}
+.todo-wrapper .todo-list li .plan-state.personal {
+  color: #5858ff;
+  background-color: #c6c6ff;
+}
+
+.todo-wrapper .todo-list li .plan-state.important {
+  color: #ff5858;
+  background-color: #ffb0b0;
+}
+.btn-group {
+  position: relative;
+}
+button.open {
+  transition: 1s;
+}
+button.close {
+  transform: rotate(180deg);
+}
+.btn-group .btn-block {
+  display: flex;
+  padding: 10px;
+  background-color: #a6b1e1;
+  border-radius: 10px;
+  position: absolute;
+  top: 20px;
+  right: -45px;
+}
+.btn-group .btn-block button {
+  width: 30px;
+  color: #fff;
+  transition: 0.3s;
+}
+.btn-group .btn-block button:hover {
+  color: #5858ff;
+}
+
+.complete-todo .todo-list {
+  opacity: 0.6;
+}

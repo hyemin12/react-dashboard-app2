@@ -1,19 +1,95 @@
+.calendar-wrapper {
+  padding: 5px 40px;
+}
+
 /* Calendar */
 .fc-theme-standard {
-  width: 500px;
-  height: auto;
-  margin-bottom: 30px;
+  width: 378px;
+  height: 300px;
 }
 .fc .fc-button {
   padding: 0 5px;
   background-color: #ccc;
   border: none;
 }
+/* 오늘 표시 */
+.fc .fc-daygrid-day.fc-day-today {
+  background-color: transparent;
+}
+.fc .fc-daygrid-day.fc-day-today::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #f00;
+  position: absolute;
+}
+
+/* 달력 헤더 */
+/* 달력 헤더 오늘 버튼 */
 .fc-today-button {
   display: none !important;
 }
+.fc .fc-toolbar {
+  justify-content: center;
+  gap: 20px;
+}
+#fc-dom-2.fc-toolbar-title {
+  font-size: 18px;
+}
+.fc .fc-toolbar.fc-header-toolbar {
+  margin-bottom: 10px;
+}
+.fc .fc-toolbar-title {
+  font-size: 1.1em;
+}
+/* 달력 버튼 */
+.fc .fc-button .fc-icon {
+  font-size: 0.8em;
+  color: #333;
+}
+.fc .fc-button-primary {
+  background-color: transparent;
+}
+.fc .fc-button-primary:hover {
+  background-color: #ccc;
+}
+
+/* 달력 요일 */
+.fc .fc-col-header-cell-cushion {
+  font-size: 10px;
+}
+.fc .fc-daygrid-body-unbalanced .fc-daygrid-day-events {
+  min-height: 1em;
+}
+
+/* 일정  */
 .fc-event-time {
   display: none;
+}
+.fc-event-title {
+  width: 100%;
+  background-color: rgba(166, 177, 225, 0.6);
+  padding-left: 5px;
+  font-size: 7px;
+  color: #444;
+  position: absolute;
+  left: 0;
+}
+/* 날짜 위치 */
+.fc-daygrid-day-top {
+  flex-direction: row !important;
+  font-size: 12px;
+}
+/* 일정 점 */
+.fc-daygrid-event-dot {
+  display: none;
+}
+/* 달력 테두리 */
+.fc-theme-standard .fc-scrollgrid,
+.fc-theme-standard td,
+.fc-theme-standard tr,
+.fc-theme-standard th {
+  border: none;
 }
 
 /* Today todo */
@@ -23,7 +99,7 @@
   align-items: center;
 }
 .today-todo .title h4 {
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 10px;
 }
 .today-todo .title button {
@@ -32,7 +108,23 @@
 
   font-size: 24px;
 }
-.today-todo li {
+.today-todo ul {
   padding: 10px 0;
-  background-color: #f7f7f7;
+  /* background-color: #f7f7f7; */
+  border-radius: 10px;
+}
+.today-todo li {
+  padding: 7px 20px;
+  font-size: 14px;
+  position: relative;
+}
+.today-todo li::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  background-color: #a6b1e1;
+  border-radius: 2px;
+  position: absolute;
+  top: 15px;
+  left: 0px;
 }

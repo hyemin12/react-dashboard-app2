@@ -8,7 +8,9 @@ body {
   /* background-color: #ede7fa; */
   font-family: "Montserrat", "Noto Sans KR", sans-serif;
 }
-input {
+input,
+select,
+option {
   font-family: "Montserrat", "Noto Sans KR", sans-serif;
 }
 h1,
@@ -45,19 +47,16 @@ button {
   height: 100vh;
 }
 .App .board {
-  width: 1300px;
+  width: 1200px;
   background-color: #fff;
   border-radius: 20px;
   box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
 }
 .App .board .board-wrapper {
   display: flex;
-  padding: 40px;
-  gap: 40px;
+  gap: 25px;
+  padding: 25px;
 }
 section.home {
   display: flex;
-}
-.home-wrapper {
-  margin-left: 50px;
 }

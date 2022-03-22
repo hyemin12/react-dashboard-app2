@@ -1,14 +1,12 @@
 /* NAV */
 .nav {
-  width: 180px;
-  padding-right: 30px;
-  border-right: 1px solid #eaeaea;
+  width: 175px;
 }
 .nav .user {
-  width: 100px;
+  width: 175px;
   margin: 0 auto;
-  margin-bottom: 70px;
-  padding-top: 40px;
+  margin-bottom: 60px;
+  padding-top: 25px;
   text-align: center;
 }
 .nav .user .user-img {
@@ -23,11 +21,15 @@
   width: 100%;
   object-fit: cover;
 }
+.nav .user .sns-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
 .nav .nav-wrapper {
 }
 .nav .nav-wrapper li a {
   display: block;
-  font-size: 18px;
   padding: 10px 15px;
   transition: box-shadow 0.3s;
 }

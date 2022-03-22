@@ -1,9 +1,17 @@
 import { createStore, combineReducers } from "redux";
-// import { portfolioData } from "./portfolio.state.js";
-// import { planData } from "./calendar.state";
+import {
+  TiWeatherSunny,
+  TiWeatherStormy,
+  TiWeatherShower,
+  TiWeatherDownpour,
+  TiWeatherSnow,
+  TiWeatherWindyCloudy,
+  TiWeatherCloudy,
+} from "react-icons/ti";
 import { data } from "./data";
 const playlist = data.playlist;
 const works = data.works;
+const weather = "";
 
 const initState = {
   newDate: new Date(),
@@ -20,12 +28,27 @@ const initState = {
       id: 0,
       text: "wordle 기능 추가하기",
       date: " 3월 13일",
-      isChecked: false,
+      isChecked: true,
+      todoState: "personal",
     },
-    { id: 1, text: "투두리스트 기능", date: " 3월 14일", isChecked: false },
+    {
+      id: 1,
+      text: "투두리스트 기능",
+      date: " 3월 14일",
+      isChecked: false,
+      todoState: "complete",
+    },
+    {
+      id: 2,
+      text: "대시보드 다시 만들기",
+      date: " 3월 13일",
+      isChecked: false,
+      todoState: "important",
+    },
   ],
   playlist,
   works,
+  weather,
 };
 
 function timeReducer(state = initState.newDate, action) {
@@ -87,30 +110,32 @@ function worksReducer(state = initState.works, { type, payload }) {
       return state;
   }
 }
-// function planReducer(state = initState.planData, { type, payload }) {
-//   switch (type) {
-//     case "add":
-//       let index = payload.index;
-//       console.log(payload.index);
-//       const prev = [...state];
-//       if (index < state.length || index > 0) {
-//         index--;
-//       } else if (index === state.length - 1) {
-//         index = 0;
-//       }
-//       console.log(prev);
-//       console.log(prev[index]);
-//       return index;
-
-//     default:
-//       return state;
-//   }
-// }
+function weatherReducer(state = initState.weather, { type, payload }) {
+  switch (type) {
+    case "0":
+      return <TiWeatherSunny />;
+    case "2":
+      return <TiWeatherStormy />;
+    case "3":
+      return <TiWeatherShower />;
+    case "5":
+      return <TiWeatherDownpour />;
+    case "6":
+      return <TiWeatherSnow />;
+    case "7":
+      return <TiWeatherWindyCloudy />;
+    case "8":
+      return <TiWeatherCloudy />;
+    default:
+      return <TiWeatherCloudy />;
+  }
+}
 const store = createStore(
   combineReducers({
     timeReducer,
     todoReducer,
     worksReducer,
+    weatherReducer,
   })
 );
 export default store;

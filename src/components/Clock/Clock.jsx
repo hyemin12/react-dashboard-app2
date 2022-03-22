@@ -11,27 +11,12 @@ function Clock() {
     }, 20000);
     return () => clearInterval(timeId);
   }, []);
-
-  const emojis = [
-    "😁",
-    "😐",
-    "😣",
-    "😊",
-    "🤭",
-    "😇",
-    "🥳",
-    "😆",
-    "😋",
-    "😎",
-    "🥰",
-  ];
-  function randomEmoji() {
-    return parseInt(Math.random() * emojis.length);
-  }
   return (
     <section className="clock-wrapper">
+      <div className="title">
+        <h4>Today is </h4>
+      </div>
       <p>{state}</p>
-      <span>{emojis[randomEmoji()]}</span>
     </section>
   );
 }

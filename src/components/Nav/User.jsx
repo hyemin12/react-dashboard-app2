@@ -7,7 +7,11 @@ function User() {
           alt=""
         ></img>
       </div>
-      <p>username</p>
+      <p>Hyemin</p>
+      <ul className="sns-group">
+        <li>git</li>
+        <li>tstory</li>
+      </ul>
     </div>
   );
 }

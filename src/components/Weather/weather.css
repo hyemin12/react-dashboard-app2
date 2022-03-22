@@ -1,0 +1,53 @@
+.weather {
+  width: 225px;
+  background-color: #ccc;
+  background: url("https://images.unsplash.com/photo-1501630834273-4b5604d2ee31?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=900&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTYzNjQzMjA3MA&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1600");
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+.weather-wrapper {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  position: relative;
+}
+.weather-wrapper .info {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.weather-wrapper .info .icon svg {
+  width: 100%;
+  height: 2.8rem;
+}
+.weather-wrapper .info .temp {
+  font-size: 28px;
+}
+/* .weather-wrapper .icon {
+  padding-top: 25px;
+  text-align: center;
+}
+.weather-wrapper .icon svg {
+  width: 100%;
+  height: 3rem;
+}
+.weather-wrapper .temp {
+  display: flex;
+  justify-content: center;
+  padding-left: 12px;
+  font-size: 24px;
+} */
+.city {
+  font-size: 12px;
+  position: absolute;
+  right: 13px;
+  bottom: 12px;
+}

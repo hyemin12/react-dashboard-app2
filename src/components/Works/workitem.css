@@ -4,14 +4,14 @@
   position: relative;
 }
 .works-item img {
-  width: 220px;
-  height: 180px;
+  width: 190px;
+  height: 150px;
   object-fit: cover;
 }
 .works-item .item-hover {
   width: 100%;
   height: 100%;
-  padding: 17px 0;
+  padding: 10px 0;
   background-color: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(2px);
   color: #fff;
@@ -22,23 +22,25 @@
 .works-item:hover .item-hover {
   width: 100%;
   height: 100%;
-  transform: translateY(-100px);
+  transform: translateY(-75px);
 }
 .works-item:hover .item-hover h4 {
-  width: 200px;
+  width: 150px;
   margin: 0 auto;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+  font-size: 14px;
   white-space: nowrap;
+
   text-overflow: ellipsis;
   overflow: hidden;
 }
 
 .works-item .item-hover button {
   border-radius: 3px;
-  padding: 5px 20px;
+  padding: 3px 20px;
   background-color: #a6b1e7;
   color: #fff;
-  font-size: 14px;
+  font-size: 12px;
   transition: 0.3s;
 }
 .works-item .item-hover button:hover {

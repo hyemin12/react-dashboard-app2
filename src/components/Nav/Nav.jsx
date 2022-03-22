@@ -8,7 +8,7 @@ function Nav() {
   const [isActive, setIsActive] = useState(false);
   const navs = [
     { page: "Home", path: "/" },
-    { page: "Todo", path: "/todo" },
+    { page: "Schedule", path: "/schedule" },
     { page: "Works", path: "/works" },
     { page: "Setting", path: "/setting" },
   ];

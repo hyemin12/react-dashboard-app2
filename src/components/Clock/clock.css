@@ -1,16 +1,24 @@
 /* CLOCK */
 .clock-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background-color: #f7f7f7;
-  border-radius: 10px;
-  margin-bottom: 20px;
+  width: 225px;
+  background-color: #ececec;
+  border-radius: 5px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.clock-wrapper h4 {
+  padding: 10px 0;
+  border-bottom: 1px solid #f7f7f7;
+  font-size: 12px;
+  font-weight: normal;
 }
 .clock-wrapper p {
-  font-size: 32px;
-}
-.clock-wrapper span {
-  font-size: 20px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 34px;
+  letter-spacing: -2px;
+  color: #333;
+  font-weight: bold;
 }

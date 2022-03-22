@@ -2,7 +2,6 @@ import FullCalendar from "@fullcalendar/react"; // must go before plugins
 import dayGridPlugin from "@fullcalendar/daygrid"; // a plugin!
 
 import { data } from "../../store/data.js";
-import TodayTodo from "./TodayTodo.jsx";
 import "./calendar.css";
 
 function Calendar() {
@@ -14,7 +13,7 @@ function Calendar() {
           plugins={[dayGridPlugin]}
           initialView="dayGridMonth"
           headerToolbar={{ left: "prev", center: "title", right: "next" }}
-          contentHeight={"auto"}
+          contentHeight={"300px"}
           fixedWeekCount={false}
           expandRows={true}
           eventBackgroundColor={"#a6b1e1"}
@@ -22,7 +21,6 @@ function Calendar() {
           events={data.events}
         />
       </div>
-      <TodayTodo events={data.events} />
     </div>
   );
 }
