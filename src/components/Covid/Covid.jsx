@@ -18,7 +18,6 @@ function Covid() {
     getCovidInfo();
   }, []);
   const citys = [
-    { kor: "전체", eng: "korea" },
     { kor: "강원", eng: "gangwon" },
     { kor: "경기", eng: "gyeonggi" },
     { kor: "경남", eng: "gyeongnam" },
@@ -40,47 +39,29 @@ function Covid() {
   console.log(citys.length);
   return (
     <div className="covid-wrapper">
-      <div className="covid-title">
-        <h4>코로나 확진 현황</h4>
-        <span>
-          <FaEllipsisH />
-        </span>
-      </div>
-
-      <div className="covid-result">
-        <div className="result-title">
-          <select
-            onChange={(e) => {
-              console.log(e.target.value);
-              setSelected(e.target);
-            }}
-          >
-            {citys.map((city) => {
-              return (
-                <option value={city.eng} key={city.kor}>
-                  {city.kor}
-                </option>
-              );
-            })}
-          </select>
+      <div className="left">
+        <div className="covid-title">
+          <h4>코로나 확진 현황</h4>
         </div>
-        <ul className="result-data">
-          {/* {covidInfo.filter((city) => city.value === selected) ? (
-            <h1>성공</h1>
-          ) : (
-            <h1>실패</h1>
-          )} */}
-          <li>
-            <span>신규</span>
-            <span></span>
-          </li>
-          <li>완치자</li>
-          <li>전체</li>
-        </ul>
-        <span>신규발생</span>
-        <span>
-          {covidInfo && covidInfo ? `${covidInfo.gyeonggi.newCase}` : null}
-        </span>
+      </div>
+      <div className="center covid-result"></div>
+      <div className="right covid-result"></div>
+      <div className="result-title">
+        <h4>{covidInfo.gyeonggi.countryName}</h4>
+        <select
+          onChange={(e) => {
+            console.log(e.target.value);
+            setSelected(e.target);
+          }}
+        >
+          {citys.map((city) => {
+            return (
+              <option value={city.eng} key={city.kor}>
+                {city.kor}
+              </option>
+            );
+          })}
+        </select>
       </div>
     </div>
   );

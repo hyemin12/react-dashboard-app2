@@ -8,10 +8,6 @@ function User() {
         ></img>
       </div>
       <p>Hyemin</p>
-      <ul className="sns-group">
-        <li>git</li>
-        <li>tstory</li>
-      </ul>
     </div>
   );
 }

@@ -36,6 +36,7 @@ a {
 button {
   border: none;
   background-color: transparent;
+  outline: none;
   cursor: pointer;
 }
 /* APP */
@@ -51,12 +52,49 @@ button {
   background-color: #fff;
   border-radius: 20px;
   box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
 }
 .App .board .board-wrapper {
   display: flex;
-  gap: 25px;
-  padding: 25px;
+  /* gap: 25px; */
+  /* padding: 25px; */
 }
 section.home {
   display: flex;
+  width: calc(1200px - 205px);
+  height: 730px;
+  background-color: #eaeaea;
+}
+
+.home-wrapper {
+  width: calc((225px * 4) + (15px * 3));
+  margin-left: 25px;
+  margin-top: 35px;
+}
+.home-wrapper h1 {
+  padding: 25px 0;
+}
+.home-wrapper .row {
+  display: flex;
+  gap: 15px;
+}
+.home-wrapper .row:nth-child(1) {
+  height: 150px;
+}
+.home-wrapper .row:nth-child(2) {
+  height: 340px;
+}
+.home-wrapper .row:nth-child(3) {
+  height: 175px;
+}
+.home-wrapper > .row > div {
+  width: 225px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 2px 2px 5px rgba(150, 150, 150, 0.4);
+  overflow: hidden;
+}
+.home-wrapper .box.grow {
+  flex-grow: 1;
 }

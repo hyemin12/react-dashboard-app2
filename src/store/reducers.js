@@ -15,14 +15,6 @@ const weather = "";
 
 const initState = {
   newDate: new Date(),
-  clock: function () {
-    const state = new Date();
-    const h = state.getHours();
-    const ampm = state < 12 ? "AM" : "PM";
-    const minutes = String(state.getMinutes()).padStart(2, "0");
-    const today = `${h > 13 ? `${h - 12}` : `${h}`} : ${minutes} ${ampm}`;
-    return today;
-  },
   todos: [
     {
       id: 0,
@@ -51,20 +43,9 @@ const initState = {
   weather,
 };
 
-function timeReducer(state = initState.newDate, action) {
-  if (action.type === "시간가져오기") {
-    state = new Date();
-    state = initState.clock();
-    return state;
-  } else {
-    state = new Date();
-    state = initState.clock();
-    return state;
-  }
-}
-
 function todoReducer(state = initState.todos, { type, payload }) {
   localStorage.setItem("todos", JSON.stringify(state));
+
   state = JSON.parse(localStorage.getItem("todos"));
   switch (type) {
     case "ADD_TODO":
@@ -72,6 +53,7 @@ function todoReducer(state = initState.todos, { type, payload }) {
       localStorage.setItem("todos", JSON.stringify(addTodo));
       return addTodo;
     case "REMOVE_TODO":
+      console.log(payload.id);
       const newTodo = state.filter((todo) => todo.id !== payload.id);
       localStorage.setItem("todos", JSON.stringify(newTodo));
       return newTodo;
@@ -81,11 +63,13 @@ function todoReducer(state = initState.todos, { type, payload }) {
       );
       return editTodo;
     case "checked":
+      console.log(payload.isChecked);
       const checked = state.map((todo) =>
         todo.id === payload.id
           ? { ...todo, isChecked: payload.isChecked }
           : todo
       );
+      console.log(checked);
       return checked;
     default:
       return state;
@@ -127,12 +111,11 @@ function weatherReducer(state = initState.weather, { type, payload }) {
     case "8":
       return <TiWeatherCloudy />;
     default:
-      return <TiWeatherCloudy />;
+      return <TiWeatherSunny />;
   }
 }
 const store = createStore(
   combineReducers({
-    timeReducer,
     todoReducer,
     worksReducer,
     weatherReducer,

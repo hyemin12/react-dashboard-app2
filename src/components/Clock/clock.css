@@ -1,14 +1,14 @@
 /* CLOCK */
 .clock-wrapper {
   width: 225px;
-  background-color: #ececec;
+  background-color: #f7f7f7;
   border-radius: 5px;
   text-align: center;
   margin-bottom: 10px;
 }
 .clock-wrapper h4 {
   padding: 10px 0;
-  border-bottom: 1px solid #f7f7f7;
+  border-bottom: 1px solid #eaeaea;
   font-size: 12px;
   font-weight: normal;
 }

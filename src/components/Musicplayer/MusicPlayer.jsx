@@ -20,7 +20,7 @@ function MusicPlayer() {
     );
   }
   return (
-    <section
+    <div
       className="music-wrapper"
       style={{ backgroundImage: `url(${state[trackIndex].albumimg})` }}
     >
@@ -37,7 +37,7 @@ function MusicPlayer() {
           onEnded={handleNext}
         />
       </div>
-    </section>
+    </div>
   );
 }
 

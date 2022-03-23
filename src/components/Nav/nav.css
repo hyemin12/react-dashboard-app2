@@ -1,6 +1,7 @@
 /* NAV */
 .nav {
   width: 175px;
+  padding: 15px;
 }
 .nav .user {
   width: 175px;
@@ -21,11 +22,7 @@
   width: 100%;
   object-fit: cover;
 }
-.nav .user .sns-group {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
+
 .nav .nav-wrapper {
 }
 .nav .nav-wrapper li a {

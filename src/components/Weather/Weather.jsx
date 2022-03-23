@@ -39,7 +39,7 @@ function Weather() {
     geolocation.getCurrentPosition(handleSuccess, handleError);
   }, []);
   return (
-    <section className="weather">
+    <div className="weather">
       {weathers && weathers ? (
         <div className="weather-wrapper">
           <div className="info">
@@ -50,7 +50,7 @@ function Weather() {
           <span className="city">{weathers.name}</span>
         </div>
       ) : null}
-    </section>
+    </div>
   );
 }
 

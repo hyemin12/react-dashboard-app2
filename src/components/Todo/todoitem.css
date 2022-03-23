@@ -1,0 +1,60 @@
+.todo-item {
+  width: 240px;
+  padding: 10px;
+  background-color: #fff;
+  /* border: 1px solid #ddd; */
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 5px rgba(150, 150, 150, 0.4);
+  margin-bottom: 10px;
+}
+.todo-item .item-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.todo-item .item-wrapper .checked {
+  padding-top: 4px;
+  margin-right: 5px;
+  font-size: 10px;
+  color: #174dff;
+  cursor: pointer;
+}
+.todo-item .item-wrapper input {
+  width: 150px;
+  white-space: wrap;
+  font-size: 14px;
+  border: none;
+}
+.todo-item .item-wrapper input:focus {
+  outline: none;
+}
+.todo-item .item-wrapper .btn-group {
+  display: flex;
+}
+.todo-item .item-wrapper .btn-group button {
+  color: #ccc;
+  transition: 0.3s;
+}
+.todo-item .item-wrapper .btn-group button:hover {
+  color: #174dff;
+}
+
+/* HOME */
+.home .todo-list-wrapper {
+  padding: 15px 20px;
+}
+.home .todo-list-wrapper p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.home .todo-item {
+  width: 100%;
+}
+.home .todo-item .checked {
+  color: #ccc;
+  margin-right: 5px;
+}
+.home .todo-item .btn-group {
+  display: none;
+}

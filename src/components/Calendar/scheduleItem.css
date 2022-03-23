@@ -1,0 +1,33 @@
+.schedule-item {
+  width: 240px;
+  padding: 7px 10px;
+  background-color: #fff;
+  /* border: 1px solid #ddd; */
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(150, 150, 150, 0.4);
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+.schedule-item .item-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.schedule-item .item-wrapper h4 {
+  width: 165px;
+  margin-bottom: 3px;
+  font-size: 12px;
+}
+.schedule-item .item-wrapper span {
+  width: 34px;
+  font-size: 12px;
+}
+.text-wrapper {
+  padding-left: 10px;
+  border-left: 1px solid #ddd;
+}
+
+.schedule-item p {
+  font-size: 12px;
+}

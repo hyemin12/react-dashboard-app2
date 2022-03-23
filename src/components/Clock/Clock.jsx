@@ -1,23 +1,27 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "./clock.css";
 
 function Clock() {
-  let state = useSelector((state) => state.timeReducer);
-  let dispatch = useDispatch();
+  const state = new Date();
+  const h = state.getHours();
+  const ampm = h < 12 ? "AM" : "PM";
+  const minutes = String(state.getMinutes()).padStart(2, "0");
+  const today = `${h > 13 ? `${h - 12}` : `${h}`} : ${minutes} ${ampm}`;
+  const [time, setTime] = useState();
   useEffect(() => {
     const timeId = setInterval(() => {
-      dispatch({ type: "시간가져오기" });
-    }, 20000);
+      setTime(new Date());
+    }, 30000);
     return () => clearInterval(timeId);
   }, []);
   return (
-    <section className="clock-wrapper">
+    <div className="clock-wrapper">
       <div className="title">
-        <h4>Today is </h4>
+        <h4>what time is it?</h4>
       </div>
-      <p>{state}</p>
-    </section>
+      <p>{today}</p>
+    </div>
   );
 }
 

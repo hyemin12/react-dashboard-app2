@@ -2,7 +2,7 @@ import FullCalendar from "@fullcalendar/react"; // must go before plugins
 import dayGridPlugin from "@fullcalendar/daygrid"; // a plugin!
 
 import { data } from "../../store/data.js";
-import "./calendar.css";
+import "./home.Calendar.css";
 
 function Calendar() {
   return (

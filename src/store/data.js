@@ -122,9 +122,24 @@ export const data = {
       url: "https://www.youtube.com/",
     },
     {
+      name: "wavve",
+      icon: "https://download.beer/wp-content/uploads/2021/01/wavve-logo-0x0.png",
+      url: "https://www.wavve.com/",
+    },
+    {
       name: "github",
       icon: "https://cdn-icons-png.flaticon.com/512/25/25231.png",
       url: "https://github.com/hyemin12",
+    },
+    {
+      name: "nomadcorder",
+      icon: "https://nomadcoders.co/m.svg",
+      url: "https://nomadcoders.co/",
+    },
+    {
+      name: "tistory blog",
+      icon: "https://play-lh.googleusercontent.com/HOwb9RHtv3AsCEyB-v1ni4z1TMgjqUJRP9FWFLNVsG-D8xoxxtfjGigzudTgSs0l8_g",
+      url: "https://hyemin-12.tistory.com/",
     },
   ],
   works: [

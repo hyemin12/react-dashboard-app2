@@ -1,0 +1,115 @@
+/* Home - CANLENDAR */
+.home .calendar-wrapper {
+  padding: 15px 40px;
+}
+
+/* Calendar */
+.home .fc-theme-standard {
+  width: 378px;
+  height: 300px;
+}
+.home .fc .fc-button {
+  padding: 0 5px;
+  background-color: #ccc;
+  border: none;
+}
+/* 오늘 표시 */
+.home .fc .fc-daygrid-day.fc-day-today {
+  position: relative;
+}
+.home .fc .fc-daygrid-day.fc-day-today a {
+  color: #fff;
+
+  font-weight: bold;
+}
+.home .fc .fc-daygrid-day.fc-day-today::before {
+  content: "";
+  width: 23px;
+  height: 23px;
+  background-color: #4d77ff;
+  border-radius: 50%;
+  position: absolute;
+  top: 0px;
+  left: -1px;
+}
+
+/* 달력 헤더 */
+/* 달력 헤더 오늘 버튼 */
+.home .fc-today-button {
+  display: none !important;
+}
+.home .fc .fc-toolbar {
+  justify-content: center;
+  gap: 20px;
+}
+.home #fc-dom-2.fc-toolbar-title {
+  font-size: 18px;
+}
+.home .fc .fc-toolbar.fc-header-toolbar {
+  margin-bottom: 10px;
+}
+.home .fc .fc-toolbar-title {
+  font-size: 1.1em;
+}
+/* 달력 버튼 */
+.home .fc .fc-button .fc-icon {
+  font-size: 0.8em;
+  color: #333;
+}
+.home .fc .fc-button-primary {
+  background-color: transparent;
+}
+.home .fc .fc-button-primary:hover {
+  background-color: #ccc;
+}
+
+/* 달력 요일 */
+.home .fc .fc-col-header-cell-cushion {
+  font-size: 10px;
+}
+.home .fc .fc-daygrid-body-unbalanced .fc-daygrid-day-events {
+  min-height: 1em;
+}
+
+/* 일정  */
+.home .fc-event-time {
+  display: none;
+}
+.home .fc-daygrid-dot-event {
+  padding: 0;
+}
+/* 이벤트 점 */
+/* .home .fc-daygrid-event-dot {
+  display: none;
+} */
+
+/* .home .fc-event-title {
+  width: 100%;
+  background-color: rgba(166, 177, 225, 0.6);
+  padding-left: 5px;
+  font-size: 7px;
+  color: #444;
+  position: absolute;
+  top: -1px;
+  left: 0;
+} */
+.home .fc-event-title {
+  display: none;
+}
+
+/* 날짜 위치 */
+.home .fc-daygrid-day-top {
+  flex-direction: row !important;
+  font-size: 12px;
+}
+.home .fc .fc-daygrid-day.fc-day-today {
+  background-color: transparent;
+}
+
+/* 달력 테두리 */
+.home .fc-theme-standard .fc-scrollgrid,
+.home .fc-theme-standard td,
+.home .fc-theme-standard tr,
+.home .fc-theme-standard th {
+  border: none;
+}

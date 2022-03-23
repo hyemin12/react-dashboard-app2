@@ -1,31 +1,37 @@
 .covid-wrapper {
-  padding: 10px 20px;
-  background-color: #f7f7f7;
-  border-radius: 10px;
-  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  padding: 20px;
 }
-.covid-wrapper .covid-title {
+.covid-wrapper > div {
+  width: 200px;
+}
+.covid-wrapper .result-title {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
-}
-.result-title {
-  display: flex;
-  width: 100%;
-  text-align: center;
-  border-radius: 10px;
-}
-.result-title select {
-  width: 100%;
   padding: 5px;
-  background-color: transparent;
-  border: 2px solid #eaeaea;
-  border-radius: 5px;
-  overflow: hidden;
+  /* background-color: #ccc; */
+  border-radius: 10px;
+  box-shadow: inset 1px 1px 4px #ccc;
 }
-.result-title select:focus {
+.covid-wrapper .result-title h4 {
+  color: blue;
+  padding-left: 17px;
+  position: relative;
+}
+.covid-wrapper .result-title h4::before {
+  content: "";
+  width: 1px;
+  height: 12px;
+  background-color: #ccc;
+  position: absolute;
+  top: 6px;
+  left: 70px;
+}
+.covid-wrapper .result-title select {
+  width: 70px;
+  border: none;
+}
+.covid-wrapper .result-title select:focus {
   outline: none;
-}
-.result-data {
-  display: flex;
 }

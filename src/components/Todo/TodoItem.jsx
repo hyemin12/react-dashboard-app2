@@ -1,37 +1,52 @@
-import { parseClassNames } from "@fullcalendar/common";
 import { useState } from "react";
-import { FaCaretDown, FaEdit, FaTrash, FaClipboard } from "react-icons/fa";
-
+import { FaEdit, FaTrash, FaCheck, FaCheckCircle } from "react-icons/fa";
+import { useDispatch } from "react-redux";
+import "./todoitem.css";
 function TodoItem(props) {
   const todo = props.todo;
-
+  const dispatch = useDispatch();
   const [isEdit, setIsEdit] = useState(false);
+  const [readOnly, setReadOnly] = useState(true);
+  function handleEdit() {
+    setIsEdit(!isEdit);
+    setReadOnly(true);
+    dispatch({
+      type: "EDIT_TODO",
+      payload: { id: todo.id, text: props.todo.value },
+    });
+  }
+  function handleChecked() {
+    dispatch({
+      type: "checked",
+      payload: { isChecked: !todo.isChecked, id: todo.id },
+    });
+  }
+  function handleRemove() {
+    dispatch({ type: "REMOVE_TODO", payload: { id: todo.id } });
+  }
   return (
-    <li>
-      <p className="plan">{todo.text}</p>
-      <p className={`plan-state ${todo.todoState}`}>{todo.todoState}</p>
-      <div className="btn-group">
-        <button
-          className={isEdit ? "close" : "open"}
-          onClick={() => {
-            setIsEdit(!isEdit);
-          }}
-        >
-          <FaCaretDown />
-        </button>
-        {isEdit ? (
-          <div className="btn-block">
-            <button>
-              <FaEdit />
+    <li className="todo-item">
+      <div className="item-wrapper">
+        <div className="checked" onClick={handleChecked}>
+          <FaCheckCircle />
+        </div>
+        <input readOnly={!isEdit ? true : false} value={todo.text} />
+        <div className="btn-group">
+          {isEdit ? (
+            <button onClick={handleEdit}>
+              <FaCheck />
             </button>
-            <button>
-              <FaTrash />
-            </button>
-            <button>
-              <FaClipboard />
-            </button>
-          </div>
-        ) : null}
+          ) : (
+            <>
+              <button onClick={handleEdit}>
+                <FaEdit />
+              </button>
+              <button onClick={handleRemove}>
+                <FaTrash />
+              </button>
+            </>
+          )}
+        </div>
       </div>
     </li>
   );
