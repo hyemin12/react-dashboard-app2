@@ -12,6 +12,7 @@ import { data } from "./data";
 const playlist = data.playlist;
 const works = data.works;
 const weather = "";
+const events = data.events;
 
 const initState = {
   newDate: new Date(),
@@ -19,37 +20,38 @@ const initState = {
     {
       id: 0,
       text: "wordle 기능 추가하기",
-      date: " 3월 13일",
+      date: "03월 13일",
       isChecked: true,
-      todoState: "personal",
     },
     {
       id: 1,
       text: "투두리스트 기능",
-      date: " 3월 14일",
+      date: "03월 14일",
       isChecked: false,
-      todoState: "complete",
     },
     {
       id: 2,
       text: "대시보드 다시 만들기",
-      date: " 3월 13일",
+      date: "03월 13일",
       isChecked: false,
-      todoState: "important",
     },
   ],
   playlist,
   works,
   weather,
+  events,
 };
 
 function todoReducer(state = initState.todos, { type, payload }) {
-  localStorage.setItem("todos", JSON.stringify(state));
-
   state = JSON.parse(localStorage.getItem("todos"));
   switch (type) {
     case "ADD_TODO":
-      const addTodo = state.concat(payload);
+      const addTodo = state.concat({
+        id: payload.id,
+        text: payload.text,
+        isChecked: false,
+        date: payload.date,
+      });
       localStorage.setItem("todos", JSON.stringify(addTodo));
       return addTodo;
     case "REMOVE_TODO":
@@ -69,7 +71,6 @@ function todoReducer(state = initState.todos, { type, payload }) {
           ? { ...todo, isChecked: payload.isChecked }
           : todo
       );
-      console.log(checked);
       return checked;
     default:
       return state;
@@ -114,11 +115,26 @@ function weatherReducer(state = initState.weather, { type, payload }) {
       return <TiWeatherSunny />;
   }
 }
+function eventsReducer(state = initState.events, { type, payload }) {
+  if (type === "ADD_EVENT") {
+    const addEvent = state.concat({
+      id: payload.id,
+      title: payload.title,
+      subtitle: payload.subtitle,
+      start: payload.start,
+      end: payload.end,
+    });
+    return addEvent;
+  } else {
+    return state;
+  }
+}
 const store = createStore(
   combineReducers({
     todoReducer,
     worksReducer,
     weatherReducer,
+    eventsReducer,
   })
 );
 export default store;

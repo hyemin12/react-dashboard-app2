@@ -2,7 +2,6 @@
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 
   background-color: #ccc;
   /* background-color: #ede7fa; */
@@ -25,6 +24,7 @@ ul,
 li {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 li {
   list-style: none;

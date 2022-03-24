@@ -1,0 +1,71 @@
+.add-create-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.add-create-wrapper .add-content {
+  width: 500px;
+  padding: 20px;
+}
+.add-create-wrapper .add-content span {
+  display: block;
+  margin-bottom: 5px;
+}
+.add-create-wrapper .create-input {
+  margin-bottom: 20px;
+}
+
+.add-create-wrapper .create-input input {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.add-create-wrapper .create-input input:focus {
+  outline: none;
+}
+.add-create-wrapper .create-date {
+  margin-bottom: 60px;
+}
+.add-create-wrapper .create-date > div {
+  display: flex;
+  gap: 10px;
+}
+.add-create-wrapper .create-date select {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+.add-create-wrapper button {
+  width: 100%;
+  background-color: #ccc;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+.add-create-wrapper button:hover {
+  box-shadow: inset 2px 2px 4px #333;
+}
+.add-create-wrapper button.btn-add {
+  background-color: #174dff !important;
+}
+
+/* CUSTOM */
+.add-create-wrapper .create-date.start,
+.add-create-wrapper .create-date.end {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.add-create-wrapper .create-date.start select,
+.add-create-wrapper .create-date.end select {
+  width: 84px;
+}
+.add-create-wrapper .create-date.end {
+  margin-bottom: 50px;
+}

@@ -3,10 +3,10 @@ import Nav from "./components/Nav/Nav.jsx";
 import Home from "./routes/Home.jsx";
 import ScheduleTemplate from "./routes/ScheduleTemplate.jsx";
 import WorksTemplate from "./routes/WorksTemplate.jsx";
+import WorkDetail from "./components/Works/WorkDetail.jsx";
 import SettingTemplate from "./routes/SettingTemplate.jsx";
 
 import "./app.css";
-import WorkDetail from "./components/Works/WorkDetail.jsx";
 
 function App() {
   return (

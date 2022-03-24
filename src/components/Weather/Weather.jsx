@@ -25,10 +25,7 @@ function Weather() {
       `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${KEY2}&units=metric`
     );
     setWeathers(response.data);
-    console.log(response.data);
     const iconId = (parseInt(response.data.weather[0].id) / 100).toFixed(0);
-    console.log(iconId);
-    console.log(typeof iconId);
     dispatch({ type: iconId });
   };
   function handleError() {

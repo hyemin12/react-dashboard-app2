@@ -4,6 +4,7 @@ import { data } from "../store/data";
 import Calendar from "../components/Calendar/Calendar";
 import TodoItem from "../components/Todo/TodoItem";
 import ScheduleItem from "../components/Calendar/ScheduleItem";
+import CreateModal from "../components/Create/CreateModal";
 import "../components/Todo/todotemplate.css";
 import "../components/Calendar/schedule.Calendar.css";
 
@@ -12,6 +13,7 @@ function TodoTemplate() {
   let todos = useSelector((state) => state.todoReducer);
   const ingTodos = todos.filter((todo) => todo.isChecked === false);
   const events = data.events.filter((event) => event.start.includes(m));
+  const [isModal, setIsModal] = useState();
 
   return (
     <div className="schedule">
@@ -40,9 +42,16 @@ function TodoTemplate() {
                 })}
               </ul>
             </div>
+            <button
+              onClick={() => {
+                setIsModal(!isModal);
+              }}
+            >
+              + Add
+            </button>
           </div>
-          <button>+ Add</button>
         </div>
+        {isModal ? <CreateModal setIsModal={setIsModal} /> : null}
       </div>
     </div>
   );

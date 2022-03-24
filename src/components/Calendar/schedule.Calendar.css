@@ -3,6 +3,7 @@
   width: 100%;
   height: 730px;
   background-color: #eaeaea;
+  position: relative;
 }
 .schedule .schedule-wrapper {
   display: flex;
@@ -78,13 +79,17 @@
   background-color: #f7f7f7;
   padding: 20px;
 }
-.schedule-list > button {
+.schedule-list .list-bottom > button {
   width: 100%;
   height: 50px;
   background: #174dff;
   border-radius: 10px;
   color: #fff;
   font-size: 16px;
+  transition: 0.3s;
+}
+.schedule-list .list-bottom > button:hover {
+  box-shadow: inset 2px 2px 5px #333;
 }
 /* 달력 커스텀 */
 /* 달력크기 */
@@ -123,6 +128,7 @@
 /* 일정 */
 .schedule .fc-event-title {
   display: flex;
+  width: 85%;
   padding-left: 2px;
   color: #555;
   white-space: nowrap;

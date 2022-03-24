@@ -9,7 +9,7 @@ function TodoList() {
         <p>오늘의 할일</p>
         <ul>
           {todos.map((todo) => {
-            return <TodoItem todo={todo} />;
+            return <TodoItem todo={todo} key={todo.id} />;
           })}
         </ul>
       </div>
