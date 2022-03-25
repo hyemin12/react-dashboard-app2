@@ -1,12 +1,12 @@
 /* Home - CANLENDAR */
 .home .calendar-wrapper {
-  padding: 15px 40px;
+  padding: 18px 40px;
 }
 
 /* Calendar */
 .home .fc-theme-standard {
   width: 378px;
-  height: 300px;
+  height: 310px;
 }
 .home .fc .fc-button {
   padding: 0 5px;

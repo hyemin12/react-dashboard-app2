@@ -1,3 +1,12 @@
+import {
+  WiDaySunny,
+  WiStormShowers,
+  WiShowers,
+  WiHail,
+  WiSnow,
+  WiFog,
+  WiCloudy,
+} from "react-icons/wi";
 export const data = {
   events: [
     {
@@ -338,5 +347,49 @@ export const data = {
   timeYears: [
     2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026, 2027, 2028, 2029,
     2030, 2031,
+  ],
+  weather: [
+    {
+      id: 0,
+      bgImg:
+        "https://images.unsplash.com/photo-1541119638723-c51cbe2262aa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80",
+      icon: <WiDaySunny />,
+    },
+    {
+      id: 2,
+      bgImg:
+        "https://images.unsplash.com/photo-1508697014387-db70aad34f4d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80",
+      icon: <WiStormShowers />,
+    },
+    {
+      id: 3,
+      bgImg:
+        "https://images.unsplash.com/photo-1600697230088-4992c83b2804?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      icon: <WiHail />,
+    },
+    {
+      id: 5,
+      bgImg:
+        "https://images.unsplash.com/photo-1527766833261-b09c3163a791?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      icon: <WiShowers />,
+    },
+    {
+      id: 6,
+      bgImg:
+        "https://images.unsplash.com/photo-1547754980-3df97fed72a8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      icon: <WiSnow />,
+    },
+    {
+      id: 7,
+      bgImg:
+        "https://images.unsplash.com/photo-1487621167305-5d248087c724?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80",
+      icon: <WiFog />,
+    },
+    {
+      id: 8,
+      bgImg:
+        "https://images.unsplash.com/photo-1622034329097-e9cf36069a3e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      icon: <WiCloudy />,
+    },
   ],
 };

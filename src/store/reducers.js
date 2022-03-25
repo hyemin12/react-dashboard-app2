@@ -11,7 +11,6 @@ import {
 import { data } from "./data";
 const playlist = data.playlist;
 const works = data.works;
-const weather = "";
 const events = data.events;
 
 const initState = {
@@ -38,7 +37,6 @@ const initState = {
   ],
   playlist,
   works,
-  weather,
   events,
 };
 
@@ -95,26 +93,7 @@ function worksReducer(state = initState.works, { type, payload }) {
       return state;
   }
 }
-function weatherReducer(state = initState.weather, { type, payload }) {
-  switch (type) {
-    case "0":
-      return <TiWeatherSunny />;
-    case "2":
-      return <TiWeatherStormy />;
-    case "3":
-      return <TiWeatherShower />;
-    case "5":
-      return <TiWeatherDownpour />;
-    case "6":
-      return <TiWeatherSnow />;
-    case "7":
-      return <TiWeatherWindyCloudy />;
-    case "8":
-      return <TiWeatherCloudy />;
-    default:
-      return <TiWeatherSunny />;
-  }
-}
+
 function eventsReducer(state = initState.events, { type, payload }) {
   if (type === "ADD_EVENT") {
     const addEvent = state.concat({
@@ -133,8 +112,8 @@ const store = createStore(
   combineReducers({
     todoReducer,
     worksReducer,
-    weatherReducer,
     eventsReducer,
   })
 );
+
 export default store;

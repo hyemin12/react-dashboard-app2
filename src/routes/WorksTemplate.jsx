@@ -31,13 +31,14 @@ function WorksTemplate() {
             <span>ect</span>
           </li>
         </ul>
-
-        <ul className="works-list">
-          {state &&
-            state.map((item) => {
-              return <WorkItem item={item} key={item.id} />;
-            })}
-        </ul>
+        <div className="works-list-wrapper">
+          <ul className="works-list">
+            {state &&
+              state.map((item) => {
+                return <WorkItem item={item} key={item.id} />;
+              })}
+          </ul>
+        </div>
       </div>
     </>
   );
