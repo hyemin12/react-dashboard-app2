@@ -4,14 +4,14 @@
   width: 1200px;
   height: 730px;
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 25px;
+  padding: 15px;
   position: absolute;
   top: 0;
   left: -205px;
   z-index: 9;
 }
 .add-wrapper .add-container {
-  height: 630px;
+  height: 670px;
   padding: 30px 40px 0px 40px;
   background-color: #fff;
   border-radius: 20px;
@@ -25,7 +25,7 @@
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 10px;
-  margin: 15px 0 20px 0;
+  margin-bottom: 30px;
   overflow: hidden;
 }
 .add-wrapper .add-title-tab li {
@@ -46,4 +46,60 @@
   font-weight: bold;
   border-radius: 10px;
   box-shadow: inset 2px 2px 5px #999;
+}
+.add-create-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.add-create-wrapper .add-content {
+  width: 500px;
+}
+.add-create-wrapper .add-content span {
+  display: block;
+  margin-bottom: 5px;
+}
+.add-create-wrapper .create-input {
+  margin-bottom: 20px;
+}
+
+.add-create-wrapper input {
+  width: 100%;
+  height: 45px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.add-create-wrapper .create-date {
+  /* display: flex;
+  gap: 10px; */
+  margin-bottom: 60px;
+}
+/* .add-create-wrapper .create-date > div {
+  flex-grow: 1;
+} */
+.add-create-wrapper .create-date .start {
+  margin-bottom: 10px;
+}
+.add-create-wrapper .create-date .start,
+.add-create-wrapper .create-date .end {
+  display: flex;
+}
+
+.add-create-wrapper button {
+  width: 100%;
+  background-color: #ccc;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+.add-create-wrapper button:hover {
+  box-shadow: inset 2px 2px 4px #333;
+}
+.add-create-wrapper button.btn-add {
+  background-color: #174dff !important;
 }

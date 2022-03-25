@@ -95,17 +95,26 @@ function worksReducer(state = initState.works, { type, payload }) {
 }
 
 function eventsReducer(state = initState.events, { type, payload }) {
-  if (type === "ADD_EVENT") {
-    const addEvent = state.concat({
-      id: payload.id,
-      title: payload.title,
-      subtitle: payload.subtitle,
-      start: payload.start,
-      end: payload.end,
-    });
-    return addEvent;
-  } else {
-    return state;
+  localStorage.setItem("events", JSON.stringify(state));
+  state = JSON.parse(localStorage.getItem("events"));
+  switch (type) {
+    case "ADD_EVENT":
+      const addEvent = state.concat({
+        id: payload.id,
+        title: payload.title,
+        subtitle: payload.subtitle,
+        start: payload.start,
+        end: payload.end,
+      });
+      localStorage.setItem("events", JSON.stringify(addEvent));
+      return addEvent;
+    case "REMOVE_EVENT":
+      const removeEvent = state.filter((event) => event.id !== payload.id);
+      console.log(removeEvent);
+      localStorage.setItem("events", JSON.stringify(removeEvent));
+      return removeEvent;
+    default:
+      return state;
   }
 }
 const store = createStore(

@@ -6,7 +6,6 @@ import "./createModal.css";
 function CreateModal(props) {
   const [mode, setMode] = useState(0);
   const setIsModal = props.setIsModal;
-  console.log(setIsModal);
   return (
     <div className="add-wrapper">
       <div className="add-container">

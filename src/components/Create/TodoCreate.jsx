@@ -1,14 +1,11 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import SelectDate from "./SelectDate";
-import "./createModule.css";
 
 function TodoCreate(props) {
   const dispatch = useDispatch();
   const [todoText, setTodoText] = useState("");
-  const [startDate, setStartDate] = useState({ year: "", month: "", date: "" });
   const setIsModal = props.setIsModal;
-  console.log(startDate);
+  const [date, setDate] = useState();
   function handleAdd() {
     if (todoText !== "") {
       dispatch({
@@ -16,12 +13,22 @@ function TodoCreate(props) {
         payload: {
           id: new Date().getUTCMilliseconds(),
           text: todoText,
-          date: `${startDate.month}월 ${startDate.date}일`,
+          date: date,
         },
       });
       setIsModal(false);
     } else {
       alert("할일 내용을 입력해주세요.");
+    }
+  }
+  function getTodo(e) {
+    switch (e.target.className) {
+      case "todoText":
+        return setTodoText(e.target.value);
+      case "date todo-date":
+        return setDate(e.target.value);
+      default:
+        break;
     }
   }
 
@@ -36,12 +43,17 @@ function TodoCreate(props) {
                 type="text"
                 name="todoText"
                 value={todoText}
-                onChange={(e) => setTodoText(e.target.value)}
+                className="todoText"
+                onChange={getTodo}
               />
             </div>
             <span>Date: </span>
             <div className="create-date">
-              <SelectDate setStartDate={setStartDate} />
+              <input
+                type="date"
+                className="date todo-date"
+                onChange={getTodo}
+              />
             </div>
           </div>
 

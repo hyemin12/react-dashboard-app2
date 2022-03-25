@@ -1,0 +1,84 @@
+.events-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1200px;
+  height: 700px;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: -205px;
+  z-index: 9;
+}
+.events-modal-wrapper {
+  width: 400px;
+  height: 250px;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  position: relative;
+}
+.events-modal-wrapper h4 {
+  margin-bottom: 10px;
+}
+.events-modal-wrapper input {
+  border: none;
+  padding: 5px 0;
+}
+.events-modal-wrapper span.caption {
+  padding: 2px 20px;
+  background-color: #174dff;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: normal;
+  margin-right: 10px;
+}
+.events-modal-wrapper .event-modal-text {
+  padding: 10px 0;
+  margin-bottom: 30px;
+}
+.events-modal-wrapper .event-modal-text > input {
+  width: 100%;
+  height: 34px;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+.events-modal-wrapper .event-modal-text p {
+  height: 35px;
+}
+
+.events-modal-wrapper .event-modal-text p > input:first-child {
+  margin: 0 10px;
+}
+.events-modal-wrapper .event-modal-text p input {
+  font-size: 16px;
+}
+.events-modal-wrapper .event-modal-text p input.readonly {
+  position: absolute;
+  top: 95px;
+  left: 185px;
+}
+.events-modal-wrapper .btn-group button {
+  width: 100%;
+  background-color: #ccc;
+  border-radius: 10px;
+  padding: 15px 0;
+  transition: 0.3s;
+}
+.events-modal-wrapper .btn-group {
+  display: flex;
+  gap: 10px;
+}
+.events-modal-wrapper button.btn-close {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  background-color: transparent;
+  position: absolute;
+  top: -150px;
+  right: 0;
+}
+.events-modal-wrapper button:hover {
+  box-shadow: inset 1px 1px 5px #777;
+}

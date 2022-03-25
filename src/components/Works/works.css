@@ -36,21 +36,22 @@
 .works-wrapper .works-list-wrapper {
   display: flex;
   justify-content: center;
+  height: 530px;
+  overflow-y: auto;
 }
-.works-wrapper .works-list {
+.works-wrapper .works-list-wrapper .works-list {
   display: flex;
   justify-content: start;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 10px;
   width: calc((220px * 4) + (20px * 3));
-  min-height: 300px;
-  overflow-y: auto;
+  height: 300px;
 }
-.works-wrapper .works-list::-webkit-scrollbar {
+.works-wrapper .works-list-wrapper::-webkit-scrollbar {
   background-color: transparent;
 }
-.works-wrapper .works-list::-webkit-scrollbar-thumb {
+.works-wrapper .works-list-wrapper::-webkit-scrollbar-thumb {
   /* background-color: rgb(166, 177, 225); */
   background-color: #999;
   border-radius: 5px;

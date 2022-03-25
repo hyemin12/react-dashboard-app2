@@ -11,6 +11,11 @@ input,
 select,
 option {
   font-family: "Montserrat", "Noto Sans KR", sans-serif;
+  box-sizing: border-box;
+}
+select:focus,
+input:focus {
+  outline: none;
 }
 h1,
 h2,
@@ -82,12 +87,6 @@ section.home {
   gap: 10px;
   width: calc((225px * 4) + (10px * 3));
 }
-/* .home-wrapper .row:nth-child(1) {
-  height: 140px;
-} */
-/* .home-wrapper .row:nth-child(2) {
-  height: 330px;
-} */
 .home-wrapper .row:nth-child(3) {
   height: 150px;
 }

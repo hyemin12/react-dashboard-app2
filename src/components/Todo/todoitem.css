@@ -26,9 +26,7 @@
   font-size: 14px;
   border: none;
 }
-.todo-item .item-wrapper input:focus {
-  outline: none;
-}
+
 .todo-item .item-wrapper .btn-group {
   display: flex;
 }

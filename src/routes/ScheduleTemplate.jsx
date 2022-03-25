@@ -18,7 +18,7 @@ function TodoTemplate() {
   return (
     <div className="schedule">
       <div className="schedule-wrapper">
-        <Calendar />
+        <Calendar setIsModal={setIsModal} />
         <div className="schedule-list">
           <div className="list-top">
             <p>
