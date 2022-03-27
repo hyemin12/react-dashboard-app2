@@ -10,6 +10,7 @@ import "../components/Calendar/schedule.Calendar.css";
 
 function TodoTemplate() {
   const m = String(new Date().getMonth() + 1).padStart(2, "0");
+  const date = data.date;
   let todos = useSelector((state) => state.todoReducer);
   const ingTodos = todos.filter((todo) => todo.isChecked === false);
   const events = data.events.filter((event) => event.start.includes(m));
@@ -22,7 +23,10 @@ function TodoTemplate() {
         <div className="schedule-list">
           <div className="list-top">
             <p>
-              <span>3월 21일</span>월요일
+              <span>
+                {date.month}월 {date.date}일
+              </span>
+              {date.week[date.day]}요일
             </p>
           </div>
           <div className="list-bottom">

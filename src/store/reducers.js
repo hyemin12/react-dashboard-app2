@@ -38,6 +38,7 @@ const initState = {
   playlist,
   works,
   events,
+  dDay: { title: "", date: "" },
 };
 
 function todoReducer(state = initState.todos, { type, payload }) {
@@ -95,7 +96,7 @@ function worksReducer(state = initState.works, { type, payload }) {
 }
 
 function eventsReducer(state = initState.events, { type, payload }) {
-  localStorage.setItem("events", JSON.stringify(state));
+  localStorage.setItem("event", JSON.stringify(state));
   state = JSON.parse(localStorage.getItem("events"));
   switch (type) {
     case "ADD_EVENT":
@@ -117,11 +118,37 @@ function eventsReducer(state = initState.events, { type, payload }) {
       return state;
   }
 }
+function dDayReducer(state = initState.dDay, { type, payload }) {
+  state = JSON.parse(localStorage.getItem("d-day"));
+  switch (type) {
+    case "CREATE_Dday":
+      state = {
+        title: payload.title,
+        date: payload.date,
+      };
+      localStorage.setItem("d-day", JSON.stringify(state));
+      return state;
+    case "EDIT_Dday":
+      state = {
+        title: payload.title,
+        date: payload.date,
+      };
+      localStorage.setItem("d-day", JSON.stringify(state));
+      return state;
+    case "REMOVE_Dday":
+      state = null;
+      localStorage.removeItem("d-day");
+      return state;
+    default:
+      return state;
+  }
+}
 const store = createStore(
   combineReducers({
     todoReducer,
     worksReducer,
     eventsReducer,
+    dDayReducer,
   })
 );
 

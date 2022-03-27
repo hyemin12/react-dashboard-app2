@@ -6,6 +6,7 @@ import TodoList from "../components/Todo/TodoList";
 import Quote from "../components/Quote/Quote";
 import Clock from "../components/Clock/Clock";
 import Weather from "../components/Weather/Weather";
+import Dday from "../components/Dday/Dday";
 
 function Home() {
   return (
@@ -13,7 +14,7 @@ function Home() {
       <ul className="home-wrapper">
         <li className="row">
           <Clock />
-          <div className="box"></div>
+          <Dday />
           <Weather />
           <Bookmark />
         </li>

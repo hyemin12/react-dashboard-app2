@@ -27,10 +27,10 @@ function Calendar() {
           fixedWeekCount={false}
           expandRows={true}
           eventBackgroundColor={"#d9fcdb"}
-          eventBorderColor={"#d9fcdb"}
+          eventBorderColor={"#F578Dc"}
           events={events}
           eventClick={handleDateClick}
-          eventsDidUpdate={events}
+          // eventsDidUpdate={("updateEvent", events)}
         />
       </div>
       {eModal ? <EventModal setEModal={setEModal} event={event} /> : null}

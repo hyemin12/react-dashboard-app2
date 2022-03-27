@@ -22,12 +22,15 @@ function MusicPlayer() {
   return (
     <div
       className="music-wrapper"
-      style={{ backgroundImage: `url(${state[trackIndex].albumimg})` }}
+      // style={{ backgroundImage: `url(${state[trackIndex].albumimg})` }}
     >
       <div className="overlay"></div>
-      <div className={`music-container ${state[trackIndex].mode}`}>
-        <h4 className="song-name">{state[trackIndex].title}</h4>
-        <p className="artist-name">{state[trackIndex].artist}</p>
+      <div className="music-container">
+        <img src={state[trackIndex].albumimg} alt={state[trackIndex].title} />
+        <div className="name-group">
+          <h4 className="song-name">{state[trackIndex].title}</h4>
+          <p className="artist-name">{state[trackIndex].artist}</p>
+        </div>
         <AudioPlayer
           src={`https://docs.google.com/uc?export=open&id=${state[trackIndex].id}`}
           showSkipControls={true}

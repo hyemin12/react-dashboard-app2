@@ -9,7 +9,8 @@ body {
 }
 input,
 select,
-option {
+option,
+button {
   font-family: "Montserrat", "Noto Sans KR", sans-serif;
   box-sizing: border-box;
 }
@@ -49,8 +50,9 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
+  position: relative;
 }
 .App .board {
   width: 1200px;
@@ -58,12 +60,20 @@ button {
   border-radius: 20px;
   box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
   overflow: hidden;
+  overflow-x: auto;
+}
+@media screen and (max-width: 1200px) {
+  .App {
+    justify-content: start;
+  }
 }
 .App .board .board-wrapper {
   display: flex;
   /* gap: 25px; */
   /* padding: 25px; */
 }
+
+/* ROUTE HOME */
 section.home {
   display: flex;
   width: calc(1200px - 205px);

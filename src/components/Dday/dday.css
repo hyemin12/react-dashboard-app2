@@ -1,0 +1,86 @@
+.dDay {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  width: 100%;
+  height: 126px;
+  position: relative;
+}
+.dDay .dDay-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.dDay button {
+  width: 100%;
+  height: 30px;
+  background-color: #eaeaea;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #eee;
+  transition: all 0.3s;
+}
+.dDay button:hover {
+  box-shadow: inset 2px 2px 4px rgb(189, 189, 189);
+}
+/* -------------*/
+/* D-DAY 없을 때 */
+.dDay .dDay-null button {
+  height: auto;
+  padding: 10px 20px;
+}
+/* D-DAY INPUT */
+.dDay .dDay-input {
+  padding: 0 20px;
+}
+.dDay .dDay-input input {
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px;
+}
+/* -------------*/
+/* D-DAY 있을 때 */
+.dDay .dDay-user {
+  padding: 0 20px;
+  text-align: center;
+}
+.dDay .dDay-user h4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 30px;
+  background-color: #333;
+  border-radius: 15px;
+  color: #fff;
+}
+.dDay .dDay-user .btn-group {
+  display: none;
+}
+.dDay .dDay-user h4:hover .btn-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.dDay .dDay-user .btn-group button {
+  width: 50px;
+  background-color: #ddd;
+  box-shadow: 3px 3px 5px #999;
+  transition: 0.3s;
+}
+.dDay .dDay-user .btn-group button:hover {
+  box-shadow: inset 1px 1px 3px #777;
+}
+.dDay .dDay-edit input {
+  width: 100%;
+  text-align: center;
+}

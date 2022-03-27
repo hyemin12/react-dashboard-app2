@@ -186,7 +186,7 @@ export const data = {
       title: "바닐라JS Wordle app",
       subtitle: "오마이걸 미니7집 NONSTOP 발매 기념 프로모션 사이트",
       describtion:
-        "요즘 인기가 많은 wordle 게임을 자바스크립트로만으로 구현한 프로젝트. input 박스에 한글을 입력하여 플레이",
+        "요즘 인기가 많은 wordle 게임을 자바스크립트로만으로 구현한 프로젝트. 하단에 있는 키보드를 누르고 ENTER 버튼을 누르면 해당 단어에 대한 정답이 나타난다.",
       skills: ["vanilla JS", "HTML/CSS"],
       code: "https://github.com/hyemin12/vanillaJS-wordle-app",
       site: "https://hyemin12.github.io/vanillaJS-wordle-app/",
