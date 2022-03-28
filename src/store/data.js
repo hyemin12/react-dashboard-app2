@@ -154,7 +154,7 @@ export const data = {
         "open-weather-map API",
       ],
       code: "https://github.com/hyemin12/react-dashboard-app",
-      site: "https://react-movie-app-1f5ff8.netlify.app/",
+      site: "https://lucid-yonath-d614bb.netlify.app/",
     },
     {
       filter: "react",
