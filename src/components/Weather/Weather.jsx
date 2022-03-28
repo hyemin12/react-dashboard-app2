@@ -29,7 +29,6 @@ function Weather() {
     const weatherId = state.filter((weather) => weather.id == i);
     setDataImg(weatherId[0]);
   };
-  console.log(dataImg);
   function handleError() {
     alert("위치를 찾을 수 없습니다.");
   }

@@ -11,20 +11,15 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.26.1",
     "dotenv": "^16.0.0",
-    "express": "^4.17.3",
-    "http-proxy-middleware": "^2.0.3",
     "react": "^17.0.2",
-    "react-day-picker": "^7.4.10",
     "react-dom": "^17.0.2",
     "react-h5-audio-player": "^3.8.3",
     "react-icons": "^4.3.1",
     "react-redux": "^7.2.6",
     "react-router-dom": "^6.2.2",
     "react-scripts": "5.0.0",
-    "react-xml-parser": "^1.1.8",
     "request": "^2.88.2",
-    "web-vitals": "^2.1.4",
-    "xml-js": "^1.6.11"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
