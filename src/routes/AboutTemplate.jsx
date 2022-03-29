@@ -21,7 +21,7 @@ function About() {
             <ul>
               {education.map((item) => {
                 return (
-                  <li className="education content" key={item.text}>
+                  <li className="content" key={item.text}>
                     <span>{item.date}</span>
                     <p>
                       {item.text}

@@ -9,32 +9,14 @@ import {
   TiWeatherCloudy,
 } from "react-icons/ti";
 import { data } from "./data";
+const todos = data.todos;
 const playlist = data.playlist;
 const works = data.works;
 const events = data.events;
 
 const initState = {
   newDate: new Date(),
-  todos: [
-    {
-      id: 0,
-      text: "wordle 기능 추가하기",
-      date: "03월 13일",
-      isChecked: true,
-    },
-    {
-      id: 1,
-      text: "투두리스트 기능",
-      date: "03월 14일",
-      isChecked: false,
-    },
-    {
-      id: 2,
-      text: "대시보드 다시 만들기",
-      date: "03월 13일",
-      isChecked: false,
-    },
-  ],
+  todos,
   playlist,
   works,
   events,
@@ -42,6 +24,7 @@ const initState = {
 };
 
 function todoReducer(state = initState.todos, { type, payload }) {
+  localStorage.setItem("todos", JSON.stringify(state));
   state = JSON.parse(localStorage.getItem("todos"));
   switch (type) {
     case "ADD_TODO":

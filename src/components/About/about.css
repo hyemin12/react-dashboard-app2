@@ -32,16 +32,16 @@
   gap: 12px;
   margin-bottom: 10px;
 }
-.about-wrapper .content span {
+.about-wrapper .content > span {
   width: 55px;
   padding-top: 2px;
 }
-.about-wrapper .content p {
+.about-wrapper .content > p {
   width: 300px;
   font-weight: bold;
   white-space: wrap;
 }
-.about-wrapper .content p span {
+.about-wrapper .content > p > span {
   display: block;
   width: 300px;
   color: #555;
@@ -88,7 +88,7 @@
   left: 0;
 }
 .recharts-layer > g:last-child > path {
-  fill: #ccc !important;
+  fill: #eaeaea !important;
 }
 .pie-chart tspan {
   color: #555;

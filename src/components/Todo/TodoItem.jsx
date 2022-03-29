@@ -4,6 +4,9 @@ import { useDispatch } from "react-redux";
 import "./todoitem.css";
 function TodoItem(props) {
   const todo = props.todo;
+  console.log(todo);
+  console.log(todo.text);
+  console.log(todo.text.length);
   const dispatch = useDispatch();
   const [isEdit, setIsEdit] = useState(false);
   const [readOnly, setReadOnly] = useState(true);
@@ -27,26 +30,35 @@ function TodoItem(props) {
   return (
     <li className="todo-item">
       <div className="item-wrapper">
-        <div className="checked" onClick={handleChecked}>
-          <FaCheckCircle />
-        </div>
-        <input readOnly={!isEdit ? true : false} value={todo.text} />
-        <div className="btn-group">
-          {isEdit ? (
-            <button onClick={handleEdit}>
-              <FaCheck />
-            </button>
-          ) : (
-            <>
-              <button onClick={handleEdit}>
-                <FaEdit />
-              </button>
-              <button onClick={handleRemove}>
-                <FaTrash />
-              </button>
-            </>
-          )}
-        </div>
+        {todo && todo ? (
+          <>
+            <div className="checked" onClick={handleChecked}>
+              <FaCheckCircle />
+            </div>
+            <textarea
+              disabled={!isEdit ? true : false}
+              value={todo.text}
+              style={{ height: todo.text.length < 16 ? "28px" : "42px" }}
+              maxLength={30}
+            />
+            <div className="btn-group">
+              {isEdit ? (
+                <button onClick={handleEdit}>
+                  <FaCheck />
+                </button>
+              ) : (
+                <>
+                  <button onClick={handleEdit}>
+                    <FaEdit />
+                  </button>
+                  <button onClick={handleRemove}>
+                    <FaTrash />
+                  </button>
+                </>
+              )}
+            </div>
+          </>
+        ) : null}
       </div>
     </li>
   );

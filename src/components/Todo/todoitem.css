@@ -20,11 +20,16 @@
   color: #174dff;
   cursor: pointer;
 }
-.todo-item .item-wrapper input {
+.todo-item .item-wrapper textarea {
+  display: flex;
+  align-items: center;
   width: 150px;
-  white-space: wrap;
-  font-size: 14px;
+  /* height: 28px; */
+  background-color: transparent;
   border: none;
+  font-size: 14px;
+  resize: none;
+  overflow: hidden;
 }
 
 .todo-item .item-wrapper .btn-group {

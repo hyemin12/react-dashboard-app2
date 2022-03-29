@@ -111,6 +111,38 @@ export const data = {
       author: "Michael Phelps",
     },
   ],
+  todos: [
+    {
+      id: 0,
+      text: "wordle 기능 추가하기",
+      date: "03월 13일",
+      isChecked: true,
+    },
+    {
+      id: 1,
+      text: "투두리스트 기능",
+      date: "03월 14일",
+      isChecked: true,
+    },
+    {
+      id: 2,
+      text: "대시보드 다시 만들기",
+      date: "03월 13일",
+      isChecked: false,
+    },
+    {
+      id: 3,
+      text: "Express 서버 공부하기",
+      date: "03월 29일",
+      isChecked: false,
+    },
+    {
+      id: 4,
+      text: "React ES6 이전 문법 공부하기",
+      date: "03월 29일",
+      isChecked: false,
+    },
+  ],
   bookmark: [
     {
       name: "Google",
