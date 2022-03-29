@@ -128,7 +128,7 @@ export const data = {
       id: 2,
       text: "대시보드 다시 만들기",
       date: "03월 13일",
-      isChecked: false,
+      isChecked: true,
     },
     {
       id: 3,

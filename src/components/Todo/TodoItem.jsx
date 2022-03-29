@@ -4,9 +4,6 @@ import { useDispatch } from "react-redux";
 import "./todoitem.css";
 function TodoItem(props) {
   const todo = props.todo;
-  console.log(todo);
-  console.log(todo.text);
-  console.log(todo.text.length);
   const dispatch = useDispatch();
   const [isEdit, setIsEdit] = useState(false);
   const [readOnly, setReadOnly] = useState(true);
