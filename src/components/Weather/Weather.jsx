@@ -52,7 +52,11 @@ function Weather() {
             <span className="city">{weathers.name}</span>
           </div>
         </div>
-      ) : null}
+      ) : (
+        <div className="weather-wrapper">
+          <span className="temp">오류</span>
+        </div>
+      )}
     </>
   );
 }

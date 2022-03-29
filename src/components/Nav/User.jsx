@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+import { FaAngleDown } from "react-icons/fa";
+
 function User() {
   return (
     <div className="user">
@@ -7,7 +10,12 @@ function User() {
           alt=""
         ></img>
       </div>
-      <p>Hyemin</p>
+      <div className="user-name">
+        <p>Hyemin</p>
+        <Link to="/about">
+          <FaAngleDown className="btn-user" />
+        </Link>
+      </div>
     </div>
   );
 }

@@ -22,7 +22,28 @@
   width: 100%;
   object-fit: cover;
 }
-
+.nav .user .user-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav .user .user-name .btn-user {
+  margin-left: 5px;
+  animation: updown 2s alternate infinite;
+  transition: 0.3s;
+}
+@keyframes updown {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+.nav .user .user-name .btn-user:hover {
+  animation-play-state: paused;
+  color: #4d77ff;
+}
 .nav .nav-wrapper {
 }
 .nav .nav-wrapper li a {

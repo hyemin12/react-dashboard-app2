@@ -15,7 +15,6 @@ function Calendar() {
     setEvent(e.event._def);
     setEModal(!eModal);
   }
-  console.log(events);
   return (
     <div className="calendar-wrapper">
       <div className="fullcalendar">

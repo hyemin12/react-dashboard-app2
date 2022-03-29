@@ -5,6 +5,7 @@ import ScheduleTemplate from "./routes/ScheduleTemplate.jsx";
 import WorksTemplate from "./routes/WorksTemplate.jsx";
 import WorkDetail from "./components/Works/WorkDetail.jsx";
 import SettingTemplate from "./routes/SettingTemplate.jsx";
+import AboutTemplate from "./routes/AboutTemplate.jsx";
 
 import "./app.css";
 
@@ -20,6 +21,7 @@ function App() {
               <Route path="/schedule" element={<ScheduleTemplate />}></Route>
               <Route path="/works" element={<WorksTemplate />}></Route>
               <Route path="/works/:id" element={<WorkDetail />}></Route>
+              <Route path="/about" element={<AboutTemplate />}></Route>
               <Route path="/setting" element={<SettingTemplate />}></Route>
             </Routes>
           </div>

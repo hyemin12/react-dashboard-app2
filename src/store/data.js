@@ -40,7 +40,15 @@ export const data = {
   ],
   playlist: [
     {
-      file: "(여자)아이들_TOMBOY.mp3",
+      id: "1cu5_5wYPoSgWxue6vjjLowaUIDvc8mQ1",
+      title: "버퍼링(Glitch Mode)",
+      artist: "NCT DREAM",
+      albumimg:
+        "https://image.genie.co.kr/Y/IMAGE/IMG_ALBUM/082/612/218/82612218_1648449566044_1_600x600.JPG/dims/resize/Q_80,0",
+      length: "3:27",
+      mode: "",
+    },
+    {
       id: "1aS9f2QuE_CLgohmFPG7ridWqBl-CR2xa",
       title: "TOMBOY",
       artist: "(여자)아이들",
@@ -49,18 +57,8 @@ export const data = {
       length: "2:54",
       mode: "white",
     },
+
     {
-      file: "NCT DREAM_Hello Future.mp3",
-      id: "1FTJox44V8r3L-mcnKUQhEB29o9ha8Jko",
-      title: "Hello future",
-      artist: "NCT DREAM",
-      albumimg:
-        "https://image.genie.co.kr/Y/IMAGE/IMG_ALBUM/082/112/811/82112811_1624865167854_1_600x600.JPG/dims/resize/Q_80,0",
-      length: "3:40",
-      mode: "",
-    },
-    {
-      file: "원필 (DAY6)_행운을 빌어 줘.mp3",
       id: "1G2_cXqTgSijagvuqkCaHJUh6swiQIJPQ",
       title: "행운을 빌어 줘",
       artist: "원필(DAY6)",
@@ -390,6 +388,77 @@ export const data = {
       bgImg:
         "https://images.unsplash.com/photo-1622034329097-e9cf36069a3e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
       icon: <WiCloudy />,
+    },
+  ],
+  education: [
+    {
+      date: "2021.09",
+      text: "패스트캠퍼스",
+      text2: " 한 번에 끝내는 프론트엔드 개발 초격차 패키지 과정 ",
+    },
+    {
+      date: "2020.09",
+      text: "하이미디어 컴퓨터학원",
+      text2: "스마트기기 Ux/UI 웹디자인&웹퍼블리셔 과정 ",
+    },
+    { date: "2017.02", text: "인천가톨릭대학교 졸업", text2: "환경디자인학과" },
+    { date: "2013.02", text: "동우여자고등학교 졸업" },
+  ],
+  certificate: [
+    { date: "2021.12", text: "정보처리기능사" },
+    { date: "2021.12", text: "컴퓨터그래픽스운용기능사" },
+    { date: "2020.09", text: "웹디자인기능사" },
+  ],
+  skill: [
+    {
+      icon: "https://blog.kakaocdn.net/dn/c5yaqz/btqXXVBqHvp/SEBAeKYrkouV6xZGcWDa9k/img.webp",
+      text: "React",
+    },
+    {
+      icon: "https://cdn-icons-png.flaticon.com/512/5968/5968267.png",
+      text: "Html",
+    },
+    {
+      icon: "https://cdn-icons-png.flaticon.com/512/919/919826.png",
+      text: "css",
+    },
+    {
+      icon: "https://cdn-icons-png.flaticon.com/512/5968/5968292.png",
+      text: "Javascript",
+    },
+    {
+      icon: "https://cdn-icons-png.flaticon.com/512/5968/5968520.png",
+      text: "Photoshop",
+    },
+    {
+      icon: "https://cdn-icons-png.flaticon.com/512/5968/5968472.png",
+      text: "Illustrator",
+    },
+    {
+      icon: "https://e7.pngegg.com/pngimages/908/365/png-clipart-autocad-autodesk-computer-aided-design-computer-software-3d-computer-graphics-autocad-mirror-text-angle-3d-computer-graphics-thumbnail.png",
+      text: "Auto Cad",
+    },
+    {
+      icon: "data:image/png;base64,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",
+      text: "3D Max",
+    },
+  ],
+  hobby: [
+    {
+      icon: "https://cdn-icons-png.flaticon.com/512/2972/2972365.png",
+      text: "음악듣기",
+    },
+    {
+      icon: "https://cdn-icons-png.flaticon.com/512/258/258028.png",
+      text: "향초 만들기",
+    },
+    {
+      icon: "https://cdn-icons-png.flaticon.com/512/1493/1493840.png",
+      text: "자전거타기",
+    },
+    {
+      icon: "https://cdn-icons-png.flaticon.com/512/701/701334.png",
+      text: "여행가기",
     },
   ],
 };
