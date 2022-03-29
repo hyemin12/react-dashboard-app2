@@ -53,7 +53,7 @@ function Weather() {
           </div>
         </div>
       ) : (
-        <div className="weather-wrapper">
+        <div className="weather-wrapper" style={{ height: "126px" }}>
           <span className="temp">오류</span>
         </div>
       )}
