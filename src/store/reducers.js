@@ -96,7 +96,7 @@ function worksReducer(state = initState.works, { type, payload }) {
 }
 
 function eventsReducer(state = initState.events, { type, payload }) {
-  localStorage.setItem("event", JSON.stringify(state));
+  localStorage.setItem("events", JSON.stringify(state));
   state = JSON.parse(localStorage.getItem("events"));
   switch (type) {
     case "ADD_EVENT":

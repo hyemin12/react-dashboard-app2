@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
+import { data } from "../../store/data";
 
 function ScheduleCreate(props) {
   const dispatch = useDispatch();
@@ -10,8 +11,13 @@ function ScheduleCreate(props) {
   const [endDate, setEndDate] = useState();
   const [endTime, setEndTime] = useState();
   const setIsModal = props.setIsModal;
+  const date = `${data.date.year}-${String(data.date.month).padStart(2, "0")}-${
+    data.date.date
+  }`;
+  console.log(date);
+  const time = `${new Date().getHours()}:${new Date().getMinutes()}`;
+
   function handleAdd() {
-    console.log(title, subtitle, startDate, startTime, endDate, endTime);
     dispatch({
       type: "ADD_EVENT",
       payload: {
@@ -25,22 +31,20 @@ function ScheduleCreate(props) {
     setIsModal(false);
   }
   function getData(e) {
+    const value = e.target.value;
     switch (e.target.className) {
       case "title":
-        return setTitle(e.target.value);
+        return setTitle(value);
       case "subtitle":
-        return setSubTitle(e.target.value);
+        return setSubTitle(value);
       case "date start":
-        console.log(e.target.value);
-        return setStartDate(e.target.value);
+        return setStartDate(value);
       case "date end":
-        return setEndDate(e.target.value);
+        return setEndDate(value);
       case "start time":
-        console.log(e.target.value);
-        return setStartTime(e.target.value);
+        return setStartTime(value);
       case "end time":
-        console.log(e.target.value);
-        return setEndTime(e.target.value);
+        return setEndTime(value);
       case "":
         return alert("내용을 입력하세요");
       default:
@@ -63,15 +67,35 @@ function ScheduleCreate(props) {
             <div>
               <span>시작일</span>
               <div className="start ">
-                <input type="date" className="date start" onChange={getData} />
-                <input type="time" className="start time" onChange={getData} />
+                <input
+                  type="date"
+                  className="date start"
+                  defaultValue={date}
+                  onChange={getData}
+                />
+                <input
+                  type="time"
+                  className="start time"
+                  defaultValue={time}
+                  onChange={getData}
+                />
               </div>
             </div>
             <div>
               <span>종료일</span>
               <div className="end">
-                <input type="date" className="date end" onChange={getData} />
-                <input type="time" className="end time" onChange={getData} />
+                <input
+                  type="date"
+                  className="date end"
+                  defaultValue={date}
+                  onChange={getData}
+                />
+                <input
+                  type="time"
+                  className="end time"
+                  defaultValue={time}
+                  onChange={getData}
+                />
               </div>
             </div>
           </li>

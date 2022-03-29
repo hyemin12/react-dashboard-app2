@@ -37,6 +37,20 @@ export const data = {
       start: "2022-03-21T06:00:00",
       end: "2022-03-21T18:00:00",
     },
+    {
+      id: 4,
+      title: "양재꽃시장",
+      subtitle: "캔들홀더 재료 사러가기",
+      start: "2022-04-13T06:00:00",
+      end: "2022-04-13T18:00:00",
+    },
+    {
+      id: 5,
+      title: "콘서트",
+      subtitle: "크리스토퍼 내한",
+      start: "2022-04-23T06:00:00",
+      end: "2022-04-23T18:00:00",
+    },
   ],
   playlist: [
     {
@@ -415,6 +429,10 @@ export const data = {
       text: "React",
     },
     {
+      icon: "https://cdn-icons-png.flaticon.com/512/5968/5968292.png",
+      text: "Javascript",
+    },
+    {
       icon: "https://cdn-icons-png.flaticon.com/512/5968/5968267.png",
       text: "Html",
     },
@@ -423,9 +441,10 @@ export const data = {
       text: "css",
     },
     {
-      icon: "https://cdn-icons-png.flaticon.com/512/5968/5968292.png",
-      text: "Javascript",
+      icon: "https://cdn-icons-png.flaticon.com/512/5968/5968358.png",
+      text: "sass",
     },
+
     {
       icon: "https://cdn-icons-png.flaticon.com/512/5968/5968520.png",
       text: "Photoshop",
@@ -460,5 +479,27 @@ export const data = {
       icon: "https://cdn-icons-png.flaticon.com/512/701/701334.png",
       text: "여행가기",
     },
+  ],
+  mbti: [
+    [
+      { name: "내향형", value: 67 },
+      { name: "외향형", value: 33 },
+    ],
+    [
+      { name: "현실주의형", value: 73 },
+      { name: "직관형", value: 27 },
+    ],
+    [
+      { name: "원칙주의형", value: 64 },
+      { name: "이성적사고형", value: 36 },
+    ],
+    [
+      { name: "계획형", value: 75 },
+      { name: "탐색형", value: 25 },
+    ],
+    [
+      { name: "신중형", value: 61 },
+      { name: "자기주장형", value: 39 },
+    ],
   ],
 };

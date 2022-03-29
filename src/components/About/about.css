@@ -70,3 +70,28 @@
   font-size: 12px;
   text-align: center;
 }
+.about-wrapper .chart-title {
+  margin-bottom: 10px;
+}
+/* GRAPH CUSTIOM */
+.pie-chart {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.pie-chart .recharts-pie {
+  position: relative;
+}
+.pie-chart p {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.recharts-layer > g:last-child > path {
+  fill: #ccc !important;
+}
+.pie-chart tspan {
+  color: #555;
+  font-size: 12px;
+  font-weight: normal;
+}

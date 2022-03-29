@@ -73,8 +73,8 @@ function About() {
               })}
             </ul>
           </li>
-          <li>
-            <h4>Person</h4>
+          <li className="chart">
+            <h4>Mbti</h4>
             <MbitiChart />
           </li>
         </ul>
