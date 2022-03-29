@@ -24,9 +24,7 @@ function MbitiChart() {
                 dataKey="value"
               ></Pie>
               {item.map((entry, index) => (
-                <>
-                  <Cell key={`cell-${index}`}></Cell>
-                </>
+                <Cell key={`cell-${index}`}></Cell>
               ))}
               <text
                 x={index === 1 || index === 2 ? "26%" : "37%"}

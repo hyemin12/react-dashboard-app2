@@ -11,6 +11,8 @@
 - [Home](#Home)
 - [Schedule](#Schedule)
 - [work](#Work)
+- [about](#About)
+
 <hr>
 
 # #Home
@@ -149,6 +151,61 @@ add 버튼을 누르면, 캘린더 일정과 todo를 추가할 수 있는 modal 
 
 이미지 상세내용이 있는 경우
 <img src="./readmeImg/dashboard-work2.png" >
+
+<br>
+<hr>
+<br>
+
+# #About
+
+<img src="./readmeImg/dashboard-about.png" />
+
+학력, 자격증, 프로그래밍 툴/스킬, 취미 등을 확인할 수 있는 페이지<br>
+
+mbti의 차트는 react-recharts 라이브러리를 활용하여 제작하였다.<br>
+기존의 차트를 커스텀하여, 차트 안에 관련 텍스트들을 추가하였다.<br>
+
+https://recharts.org/en-US/examples/PieChartWithPaddingAngle
+
+```js
+<div className="pie-chart">
+  {chart.map((item, index) => (
+    <>
+      <PieChart width={85} height={110} key={index}>
+        <Pie
+          data={item}
+          cx={42} // 차트 좌표
+          cy={42} // 차트 좌표
+          innerRadius={25}
+          outerRadius={38}
+          fill={colors[index]}
+          paddingAngle={5}
+          dataKey="value"
+        ></Pie>
+        {item.map((entry, index) => (
+          <Cell key={`cell-${index}`}></Cell> // 차트의 path
+        ))}
+        // 차트명
+        <text
+          x={index === 1 || index === 2 ? "26%" : "37%"}
+          y={105}
+          fill="black"
+          fontSize={12}
+        >
+          {item[0].name}
+        </text>
+        // 차트 퍼센트
+        <text
+          x={"41%"}
+          y={"47%"}
+          fontSize={"14px"}
+          fill={colors[index]}
+        >{`${item[0].value}%`}</text>
+      </PieChart>
+    </>
+  ))}
+</div>
+```
 
 <br>
 <hr>
