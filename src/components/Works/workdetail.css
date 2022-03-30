@@ -75,3 +75,30 @@
 .img2 img {
   width: 100%;
 }
+.detail-tab-wrapper {
+  width: 100%;
+}
+.detail-tab-wrapper .tab-title {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.detail-tab-wrapper .tab-title li {
+  padding: 7px 20px;
+  background-color: #a6b1e7;
+  border-radius: 20px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.detail-tab-wrapper .tab-title li:hover {
+  background-color: #5973e3;
+}
+.tab-img img {
+  width: 100%;
+  object-fit: cover;
+}
