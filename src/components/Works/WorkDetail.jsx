@@ -45,7 +45,7 @@ function WorkDetail() {
             <img src={`../img/portfolio/${item.img2}.jpg`} alt={item.title} />
           </div>
         ) : null}
-        {item.tab1 !== null ? (
+        {item.tab1 ? (
           <div className="detail-tab-wrapper">
             <ul className="tab-title">
               <li
