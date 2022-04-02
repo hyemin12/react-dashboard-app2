@@ -142,6 +142,18 @@ export const data = {
       date: "03월 29일",
       isChecked: false,
     },
+    {
+      id: 5,
+      text: "리덕스 미들웨어, 리덕스 사가",
+      date: "04월 4일",
+      isChecked: false,
+    },
+    {
+      id: 6,
+      text: "React Hook 복습",
+      date: "03월 29일",
+      isChecked: false,
+    },
   ],
   bookmark: [
     {
