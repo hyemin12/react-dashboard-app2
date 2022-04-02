@@ -138,7 +138,7 @@ export const data = {
     },
     {
       id: 4,
-      text: "React ES6 이전 문법 공부하기",
+      text: "React 이전 문법 공부하기",
       date: "03월 29일",
       isChecked: false,
     },
