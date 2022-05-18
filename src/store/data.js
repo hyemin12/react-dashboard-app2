@@ -313,31 +313,6 @@ export const data = {
       site: "https://hyemin12.github.io/web-design-portfolio/04Melon/",
     },
     {
-      filter: "jquery",
-      id: "nonstop",
-      img: "nonstop",
-      img2: "nonstop2",
-      title: "미니7집 NONSTOP 발매 기념 프로모션 사이트",
-      describtion:
-        "오마이걸 미니7집 NONSTOP 발매 기념 프로모션 사이트이다. jQery 풀페이지 플러그인을 사용하여 제작하였고, 오마이걸의 앨범 컨셉을 웹사이트에 녹여내려고 하였다. 카드이미지를 클릭하면 해당 페이지로 이동하고, 마지막 이벤트 페이지에서 카드를 클릭하면 모달창이 오픈된다.",
-      skills: ["HTML/CSS", "jQuery", "design"],
-      code: "https://github.com/hyemin12/web-design-portfolio/03OHMYGIRL/",
-      site: "https://hyemin12.github.io/web-design-portfolio/03OHMYGIRL/index2.html#a5st",
-    },
-    {
-      filter: "jquery",
-      id: "2021portfolio",
-      img: "2021portfolio",
-      img2: "2021portfolio2",
-      title: "jQeury Fullpage 2021 포트폴리오",
-      subtitle: "jQuery Fullpage Website",
-      describtion:
-        "개인작업물 포트폴리오를 풀페이지 플러그인을 사용하여 제작하였다. 작업물이 최대한 강조될 수 있도록 심플하게 디자인하였고, 작업물에 마우스 오버 시 해당 사이트로 이동할 수 있도록 하였다.",
-      skills: ["HTML/CSS", "jQuery", "design"],
-      code: "https://github.com/hyemin12/web-design-portfolio/05portfolio_fullpage/",
-      site: "https://hyemin12.github.io/web-design-portfolio/05portfolio_fullpage/#a1st",
-    },
-    {
       filter: "ect",
       id: "lottecard",
       img: "lottecard",

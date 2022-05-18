@@ -1,11 +1,11 @@
 import { Route, Routes } from "react-router-dom";
 import Nav from "./components/Nav/Nav.jsx";
-import Home from "./routes/Home.jsx";
-import ScheduleTemplate from "./routes/ScheduleTemplate.jsx";
-import WorksTemplate from "./routes/WorksTemplate.jsx";
+import Home from "./pages/Home.jsx";
+import ScheduleTemplate from "./pages/ScheduleTemplate.jsx";
+import WorksTemplate from "./pages/WorksTemplate.jsx";
 import WorkDetail from "./components/Works/WorkDetail.jsx";
-import SettingTemplate from "./routes/SettingTemplate.jsx";
-import AboutTemplate from "./routes/AboutTemplate.jsx";
+import SettingTemplate from "./pages/SettingTemplate.jsx";
+import AboutTemplate from "./pages/AboutTemplate.jsx";
 
 import "./app.css";
 
